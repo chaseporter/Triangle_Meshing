@@ -10,6 +10,7 @@ To implement the Bezier patch I had to take a double sum over the values u and v
 The two biggest roadblocks I encountered in this part of the project was realizing I would need to use three different matrices for the x, y, and z coordinates. To get a better understanding of the formulas in the notes I read many online resources for Bezier Patches and found the following to be the most useful: [Bezier Patch Matrix Formation] (http://www.idav.ucdavis.edu/education/CAGDNotes/Matrix-Cubic-Bezier-Patch/Matrix-Cubic-Bezier-Patch.html). The next road block was a bit of a head-bang-against-a-wall error. As far as I could tell I implemented everything correctly, even went so far as to check by hand the values I should have been generating for the matrices I calculated in the preprocess step, but I was still getting an error converting polygons to halfedge mesh. What I did not realize was that vertices are defined in a clockwise order and the order of the vertices inputed to addtriangle had to be as well. The results of finally getting this part to work are shown below.
 
 <img src="images/Part1.png" width="800px" />
+
 ```
 Rendered teapot mesh: View 1
 ```
